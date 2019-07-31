@@ -1,4 +1,16 @@
 //Datatypes
+/*
+ * DATATYPES:
+ *
+ * 0. Different types of data require different data types to store. A person's age
+ * can easily be expressed by a number, but a person's eye color less so. The type of data
+ * a variable contains determines what can be done with that data.
+ *
+ * 1. To create a variable we use a keyword (var, let, or const) followed by a name (id or alias) for our
+ * variable.
+ *
+ * 2. There are 2 phases of using variables: declaration and initialization (or assignment).
+ */
 
 //Number
 //numbers can be integers or decimal numbers
@@ -20,6 +32,11 @@ var bool2 = false;
 //A zero-indexed grouping of any type or types of data, including objects or other arrays
 //bounded by square brackets
 var arr1 = [0, 1, 2, 3, 4];
+//Arrays are zero-indexed, meaning the individual datapoints are stored in an index starting with 0.
+//The values in the above arr1 correspond to their index locations. The number 0 can be accessed with arr1[0]
+//Using the .length property, values from the end of the array can be accessed, 
+//e.g. 4 can be accessed with arr1[arr.length - 1] (remember that the last index will be one less than
+//the length because the index starts counting at 0)
 var arr2 = ['first', 42, arr1];
 
 //Object
@@ -49,6 +66,7 @@ console.log(noReturn()); //undefined
 
 //null
 //a value representing the intentional absence of a value
+var nulValue = null;
 
 //NaN
 //Not a number - certain mathematical expressions resolve to NaN.

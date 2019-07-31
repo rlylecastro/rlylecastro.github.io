@@ -39,3 +39,41 @@ var myVariable = true;
 myVariable = "someString";
 
 //const myEyeColor = 'brown'; //throws a parsing error: myEyeColor has already been declared
+
+//Below is a function illustrating the difference between var, let, and const. Key takeaways include:
+// -declarations made with var are hoisted, but declarations made with let and const are not
+// -let and const variables are scoped to the block they are created, but var variables are scoped to their encompassing function
+
+function testingVarLetConst() {
+	//var
+	if (1 === 1) {
+		console.log(`i = ${i} before declaration & assignment`)
+		i = 10;
+		console.log(`i = ${i} before declaration`);
+		var i = 15;
+		console.log(`i = ${i} after declaration & assignment`);
+	}
+	console.log(`i = ${i} outside block in which it was declared`);
+	//let
+	if (1 === 1) {
+		let j;
+		console.log(`j = ${j} before declaration & assignment`)
+		j = 20;
+		console.log(`j = ${j} before declaration`);
+		j = 25;
+		console.log(`j = ${j} after declaration & assignment`);
+	}
+	//console.log(`j = ${j} outside block in which it was declared`);
+	//const
+		const k = 0;
+		if (1 === 1) {
+		console.log(`k = ${k} before declaration & assignment`)
+		//k = 30;
+		console.log(`k = ${k} before declaration`);
+		//k = 35;
+		console.log(`k = ${k} after declaration & assignment`);
+	}
+	//console.log(`k = ${k} outside block in which it was declared`);
+}
+
+testingVarLetConst();

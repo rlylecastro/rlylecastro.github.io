@@ -1,4 +1,6 @@
 //String manipulation
+//Strings are great, but what if you want to do more with those strings? Here are some ways to manipulate strings
+//  to make new strings.
 
 //With operators
 var greeting = 'Hello';
@@ -15,8 +17,6 @@ console.log(greeting.toUpperCase()); //converts all characters to uppercase
 console.log(greeting.toLowerCase()); //converts all characters to lowercase
 
 console.log(greeting[0]); //prints the character at index 0, 'H'
-
-console.log(greeting.length); //5
 
 console.log(greeting.replace('ello', 'i')); //replaces the first instance of 'ello' with 'i', resulting in 'Hi'.
 

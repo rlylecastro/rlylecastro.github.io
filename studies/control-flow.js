@@ -1,9 +1,18 @@
-/* Control flow */
+/* Control flow
+    You don't always want all of your code to run under any circumstance. Sometimes you want some of your code to run
+    only under certain conditions. Control flow is the structure used to dictate when and why a given block of code runs.
+*/
 
-/*If
-Else-if
-Else */
-
+/*If | Else-if | Else
+    An if/else-if/else tree is a standard way to structure what code runs when. The structure begins with 
+    the keyword if, followed by an expression that resolves to a boolean. If the expression resolves true, the following code
+    block will execute, if not, the interpreter moves onto the next else-if, which again will run depending on how its
+    boolean expression resolves, and so on. The interpreter checks the conditions of the if / else-if statements in order, so
+    if more than one is true, the first one encountered will be the code that executes.
+    
+    If none of the conditions are true, the code in the else block will run. Note that the else block does not have an associated
+    boolean expression, and can be thought of as a default action to take assuming all other conditionals are false.
+*/
 let test = 0
 
 

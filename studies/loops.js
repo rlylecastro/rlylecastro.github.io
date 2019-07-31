@@ -1,16 +1,26 @@
 //Loops
+//  It's often useful to make code run multiple times. Rather than having to write out the code for each time you want it
+//  to run, you can set it up as a loop instead. Three of the most common flavors of loop are while, for, and for-in loops.
+
 //Explain while, for, and for-in loops
 
 //while loop
+    //while loops are useful in situations where you want code to run until a certain condition is met.
+    //just make sure that your end condition actually will be met, otherwise you can set up an infinite loop.
 var x = 0;
-while (x < 10) { //the statement in parenthesis is the condition that ends the loop
+//[keyword]  [boolean expression] 
+  while      (x < 10)             { 
+//[code block to run while boolean expression is true]
     console.log(x);
     x++;
 }
-//when using a while loop, make sure your end condition will be met; otherwise you've created an infinite loop
 
 //for loop
-for (let i = 0; i < 5; i++) {
+    //for loops are useful when you want code to run for a specified number of times. An example would be when you
+    //want something to happen for each element in an array.
+//[keyword] [variable initialization; boolean expression; incrementer]
+for         (let i = 0; i < 5; i++) {
+//[code block to run while boolean expression is true]    
     console.log(i); //prints 0 1 2 3 4 5
 }
 
@@ -21,8 +31,9 @@ let obj = {
     city: 'New Orleans',
     state: 'Louisiana'
 };
-
+//[keyword] [variable intialization <in> [object over which to loop]]
 for (let key in obj) {
+    //for-in loops will perform the action in the code block for each key-value pair in the object
     console.log(obj.key); //prints the values corresponding to each key in obj
 }
 
@@ -45,3 +56,8 @@ for (let i = arr.length - 1; i > -1; i--) { //remember that the last term in an 
 }
 //Loop over an Object
 //see for-in example above
+
+//Infinite loops can occur if the boolean expression that defines the loop's end condition never becomes true.
+//One example of an infinite condition would be:
+//for (let i = 0; i > 5; i--);
+//In short, remember which way you're going!

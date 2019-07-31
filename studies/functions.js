@@ -30,7 +30,8 @@ function scopeChecker() {
 }
 //console.log(globalVar, localVar); //this does not; localVar isn't accessible here
 
-//Closures: Functions form closures around the data they house. If an object returned from the Function and is held in memory somewhere (referenced), that closure stays ALIVE, and data can continue to exist in these closures! (See: our meeting-room app for an example!)
+//Closures: Functions form closures around the data they house. If an object returned from the Function and is held in memory somewhere (referenced), 
+//that closure stays ALIVE, and data can continue to exist in these closures! (See: our meeting-room app for an example!)
 function add(num1, num2) {
     return num1 + num2;
 }
@@ -40,3 +41,9 @@ function print(value) {
 }
 
 print(add(2, 2)); //this is closure because print has access to the parameters of num1 + num2 via add's return statement
+
+//Functions can be assigned to a variable, just like any other data type.
+var pizza = function(crust, toppings, price) {
+  //do something useful with parameters passed
+  //return something, optionally
+};
